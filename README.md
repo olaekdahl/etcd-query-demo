@@ -1,5 +1,8 @@
 # Query etcd Demo
 
+### Prerequisites
+This demo assumes that **[kind](https://kind.sigs.k8s.io/docs/user/quick-start/)** and **[etcdctl](https://etcd.io/docs/v3.4/install/)** has been installed.
+
 ### Steps to deploy a kind cluster and query etcd
 
 Step 1: Create cluster  
