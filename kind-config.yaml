@@ -7,9 +7,3 @@ nodes:
   extraPortMappings:
   - containerPort: 2379
     hostPort: 2379       # host port to connect etcdctl
-  kubeadmConfigPatches:
-  - |
-    kind: InitConfiguration
-    nodeRegistration:
-      kubeletExtraArgs:
-        "node-labels": "ingress-ready=true"
