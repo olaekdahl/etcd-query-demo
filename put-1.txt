@@ -1,0 +1,35 @@
+PUT
+/registry/deployments/default/nginx
+k8s
+
+apps/v1
+Deployment 
+ 
+nginxdefault"*$cef8cfa9-4177-4624-a8b7-0fedc1eb1ae528  ҨZ
+
+appnginxb&
+!deployment.kubernetes.io/revision2b 
+0kubectl.kubernetes.io/last-applied-configuration {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"creationTimestamp":null,"labels":{"app":"nginx"},"name":"nginx","namespace":"default"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"nginx"}},"strategy":{},"template":{"metadata":{"creationTimestamp":null,"labels":{"app":"nginx"}},"spec":{"containers":[{"image":"nginx","name":"nginx","ports":[{"containerPort":80}],"resources":{}}]}}},"status":{}}
+ K
+kubectlUpdateapps/v1FieldsV1:
+{"f:spec":{"f:replicas":{}}}Bscale  
+kubectl-client-side-applyUpdateapps/v ҨFieldsV1: 
+ {"f:metadata":{"f:annotations":{".":{},"f:kubectl.kubernetes.io/last-applied-configuration":{}},"f:labels":{".":{},"f:app":{}}},"f:spec":{"f:progressDeadlineSeconds":{},"f:revisionHistoryLimit":{},"f:selector":{},"f:strategy":{"f:rollingUpdate":{".":{},"f:maxSurge":{},"f:maxUnavailable":{}},"f:type":{}},"f:template":{"f:metadata":{"f:labels":{".":{},"f:app":{}}},"f:spec":{"f:containers":{"k:{\"name\":\"nginx\"}":{".":{},"f:image":{},"f:imagePullPolicy":{},"f:name":{},"f:ports":{".":{},"k:{\"containerPort\":80,\"protocol\":\"TCP\"}":{".":{},"f:containerPort":{},"f:protocol":{}}},"f:resources":{},"f:terminationMessagePath":{},"f:terminationMessagePolicy":{}}},"f:dnsPolicy":{},"f:restartPolicy":{},"f:schedulerName":{},"f:securityContext":{},"f:terminationGracePeriodSeconds":{}}}}}B  
+kube-controller-managerUpdateapps/vȤҨFieldsV1: 
+ {"f:metadata":{"f:annotations":{"f:deployment.kubernetes.io/revision":{}}},"f:status":{"f:availableReplicas":{},"f:conditions":{".":{},"k:{\"type\":\"Available\"}":{".":{},"f:lastTransitionTime":{},"f:lastUpdateTime":{},"f:message":{},"f:reason":{},"f:status":{},"f:type":{}},"k:{\"type\":\"Progressing\"}":{".":{},"f:lastTransitionTime":{},"f:lastUpdateTime":{},"f:message":{},"f:reason":{},"f:status":{},"f:type":{}}},"f:observedGeneration":{},"f:readyReplicas":{},"f:replicas":{},"f:updatedReplicas":{}}}Bstatus 
+
+
+appnginx 
+
+"*28BZ
+
+appnginx O
+nginxnginx*2
+P"TCP*Bj/dev/termination-logrAlways    FileAlways 2
+                                                                ClusterFirstBJRX`hr   default-scheduler "'
+RollingUpdate
+       25%25%(0
+8H   (2z
+
+ProgressingTrue"NewReplicaSetAvailable*9ReplicaSet "nginx-55f598f8d" has successfully progressed Ҩ  Ҩ2r
+        AvailableFalse"MinimumReplicasUnavailable*.Deployment does not have minimum availabilityȤҨȤҨ8"

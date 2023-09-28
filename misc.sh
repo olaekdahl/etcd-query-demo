@@ -23,3 +23,6 @@ ETCDCTL_API=3 etcdctl \
     --cacert=ca.crt --cert=server.crt \
     --key=server.key \
     get /registry/deployments --prefix --keys-only
+
+# Step 6: Set a variable for easier querying. Since v3.4 it's not necessary to set the API version to 3.
+etcd="etcdctl --endpoints=https://127.0.0.1:2379 --cacert=ca.crt --cert=server.crt --key=server.key"
